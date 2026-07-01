@@ -9,6 +9,27 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+        macros {
+                shift_enter: shift_enter {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LSHIFT>
+                        , <&macro_tap &kp ENTER>
+                        , <&macro_release &kp LSHIFT>
+                        ;
+                };
+                win_shift_s: win_shift_s {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LGUI &kp LSHIFT>
+                                , <&macro_tap &kp S>
+                                , <&macro_release &kp LGUI &kp LSHIFT>
+                                ;
+                };
+        }
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -36,10 +57,10 @@
                     display-name = "NAV";
                     bindings = 
                     < 
-    &none   &none   &none  &none  &none  &none      &none     &none     &none  &none      &none  &none
-    &trans  &none   &none  &none  &none  &none      &kp LEFT  &kp DOWN  &kp UP &kp RIGHT  &none  &none
-    &none   &none   &none  &none  &none  &none      &none     &none     &none  &none      &none  &none
-    &trans  &trans  &trans                          &trans    &trans    &trans
+    &none   &none   &none         &none  &none  &none      &none     &none     &none  &none      &none  &none
+    &trans  &none   &none         &none  &none  &none      &kp LEFT  &kp DOWN  &kp UP &kp RIGHT  &none  &none
+    &none   &none   &win_shift_s  &none  &none  &none      &none     &none     &none  &none      &none  &none
+    &trans  &trans  &shift_enter                           &trans    &trans    &trans
                     >;
                 };
         };
