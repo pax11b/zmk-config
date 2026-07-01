@@ -28,7 +28,7 @@
                                 , <&macro_release &kp LGUI &kp LSHIFT>
                                 ;
                 };
-        }
+        };
 
         keymap {
                 compatible = "zmk,keymap";
