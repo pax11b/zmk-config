@@ -60,7 +60,7 @@
                     display-name = "Nav";
                     bindings = 
                     < 
-    &none   &none   &none         &none  &none  &none      &none     &none     &none  &none      &none  &none
+    &none   &none   &none         &none  &none  &none      &none     &none     &none  &none      &none  &bt BT_CLR
     &trans  &none   &none         &none  &none  &none      &kp LEFT  &kp DOWN  &kp UP &kp RIGHT  &none  &none
     &none   &none   &win_shift_s  &none  &none  &none      &none     &none     &none  &none      &none  &none
     &trans  &trans  &shift_enter                           &trans    &trans    &trans
