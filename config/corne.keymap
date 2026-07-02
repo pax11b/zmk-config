@@ -22,11 +22,13 @@
                 win_shift_s: win_shift_s {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
+                        wait-ms = <40>;
+                        tap-ms = <40>;
                         bindings
-                                = <&macro_press &kp LGUI &kp LSHIFT>
-                                , <&macro_tap &kp S>
-                                , <&macro_release &kp LGUI &kp LSHIFT>
-                                ;
+                        = <&macro_press &kp LGUI &kp LSHIFT>
+                        , <&macro_tap &kp S>
+                        , <&macro_release &kp LGUI &kp LSHIFT>
+                        ;
                 };
         };
 
