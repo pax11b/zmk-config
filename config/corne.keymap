@@ -19,17 +19,6 @@
                         , <&macro_release &kp LSHIFT>
                         ;
                 };
-                win_shift_s: win_shift_s {
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        wait-ms = <40>;
-                        tap-ms = <40>;
-                        bindings
-                        = <&macro_press &kp LGUI &kp LSHIFT>
-                        , <&macro_tap &kp S>
-                        , <&macro_release &kp LGUI &kp LSHIFT>
-                        ;
-                };
         };
 
         keymap {
@@ -38,32 +27,54 @@
                 default_layer {
                         display-name = "Home";
                         bindings = <
-    &kp TAB   &kp Q    &kp W   &kp E   &kp R   &kp T       &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+    &kp TAB   &kp Q    &kp W   &kp E   &kp R   &kp T       &kp Y &kp U  &kp I     &kp O   &kp P    &mo 3
     &kp BSPC  &kp A    &kp S   &kp D   &kp F   &kp G       &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
     &mo 2     &kp Z    &kp X   &kp C   &kp V   &kp B       &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp DEL
     &kp LGUI &mt LCTRL ESC &mt LSHFT RET                   &kp SPACE &mo 1 &kp LALT
                         >;
                 };
 
-                num_layer {
+                one_layer {
                     display-name = "Num";
                     bindings = 
                     <
     &none      &kp GRAVE  &kp EQUAL  &kp MINUS  &kp LPAR   &kp RPAR                   &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp BSLH    &none
     &trans     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0      &none
     &trans     &none      &none      &none      &kp LT     &kp GT                     &none      &none      &trans     &trans     &trans      &none
-    &trans     &trans     &trans                                                      &trans     &trans     &trans
+    &mo 4      &trans     &trans                                                      &trans     &trans     &trans
                     >;
                 };
 
-                nav_layer {
-                    display-name = "Nav";
+                two_layer {
+                    display-name = "nav";
                     bindings = 
                     < 
-    &none   &none   &none         &none  &none  &none      &none     &none     &none  &none      &none  &bt BT_CLR
-    &trans  &none   &none         &none  &none  &none      &kp LEFT  &kp DOWN  &kp UP &kp RIGHT  &none  &none
-    &none   &none   &win_shift_s  &none  &none  &none      &none     &none     &none  &none      &none  &none
+    &none   &none   &none  &none  &none  &none      &none     &none     &none  &none      &none  &none
+    &trans  &none   &none  &none  &none  &none      &kp left  &kp down  &kp up &kp right  &none  &none
+    &none   &none   &none  &none  &none  &none      &none     &none     &none  &none      &none  &none
     &trans  &trans  &shift_enter                           &trans    &trans    &trans
+                    >;
+                };
+                
+                three_layer {
+                    display-name = "setting";
+                    bindings = 
+                    < 
+    &none  &none &none &none &none &none      &bt BT_SEL 0 &none &none &none &kp C_VOL_UP  &none
+    &trans &none &none &none &none &none      &bt BT_SEL 1 &none &none &none &kp C_VOL_DN  &kp C_MUTE
+    &none  &none &none &none &none &none      &bt BT_SEL 2 &none &none &none &kp C_PP      &bt BT_CLR
+    &trans  &trans  &trans                    &trans       &trans &trans
+                    >;
+                };
+                
+                four_layer {
+                    display-name = "function";
+                    bindings = 
+                    < 
+    &none  &none  &none  &none  &none  &none      &kp F11 &kp F12 &none  &none  &none   &none
+    &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5     &kp F6  &kp F7  &kp F8 &kp F9 &kp F10 &none
+    &none  &none  &none  &none  &none  &none      &none   &none   &none  &none  &none   &none
+    &trans &trans &trans                          &trans  &trans  &trans
                     >;
                 };
         };
