@@ -49,7 +49,7 @@
                     display-name = "Nav";
                     bindings = 
                     < 
-    &none   &none   &none  &none  &none  &none      &none     &none     &none  &none      &none  &none
+    &none   &none   &none  &none  &none  &to 5      &none     &none     &none  &none      &none  &none
     &trans  &none   &none  &none  &none  &none      &kp LEFT  &kp DOWN  &kp UP &kp RIGHT  &none  &none
     &none   &none   &none  &none  &none  &none      &none     &none     &none  &none      &none  &none
     &trans  &trans  &shift_enter                    &trans    &trans    &trans
@@ -62,7 +62,7 @@
                     < 
     &none  &none &none &none &none &none      &bt BT_SEL 0 &none &none &none &kp C_VOL_UP  &none
     &trans &none &none &none &none &none      &bt BT_SEL 1 &none &none &none &kp C_VOL_DN  &kp C_MUTE
-    &to 5  &none &none &none &none &none      &bt BT_SEL 2 &none &none &none &kp C_PP      &bt BT_CLR
+    &none  &none &none &none &none &none      &bt BT_SEL 2 &none &none &none &kp C_PP      &bt BT_CLR
     &trans  &trans  &trans                    &trans       &trans &trans
                     >;
                 };
