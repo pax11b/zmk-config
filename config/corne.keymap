@@ -77,8 +77,6 @@
     &trans &trans &trans                          &trans  &trans  &trans
                     >;
                 };
-        };
-                
                 five_layer {
                     display-name = "Minecraft";
                     bindings = 
@@ -89,4 +87,6 @@
     &kp ESC   &mo 6  &kp SPACE                           &trans &trans &trans
                     >;
                 };
+        };
+                
 };
