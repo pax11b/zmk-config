@@ -50,9 +50,9 @@
                     bindings = 
                     < 
     &none   &none   &none  &none  &none  &none      &none     &none     &none  &none      &none  &none
-    &trans  &none   &none  &none  &none  &none      &kp left  &kp down  &kp up &kp right  &none  &none
+    &trans  &none   &none  &none  &none  &none      &kp LEFT  &kp DOWN  &kp UP &kp RIGHT  &none  &none
     &none   &none   &none  &none  &none  &none      &none     &none     &none  &none      &none  &none
-    &trans  &trans  &shift_enter                           &trans    &trans    &trans
+    &trans  &trans  &shift_enter                    &trans    &trans    &trans
                     >;
                 };
                 
